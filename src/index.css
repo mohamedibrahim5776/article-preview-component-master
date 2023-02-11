@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: 'Manrope', sans-serif;
+}
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+.container {
+    margin: 50px auto;
+}
+.main {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+.part {
+    padding-top: 80px;
+    background-color: white;
+    border-radius: 0 0 20px 20px;
+}
+.part .text {
+    padding: 0 20px 0 20px;
+}
+.part .text h2 {
+    margin-bottom: 25px;
+    line-height: 35px;
+}
+.part .text p {
+    margin-bottom: 25px;
+    color: #838383;
+    line-height: 25px;
+    word-spacing: 3px;
+}
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    /* display: none; */
+}
+.account .profile {
+    width: 70px;
+    border-radius: 50%;
+}
+.account div p {
+    color: #838383;
+    margin-top: 10px;
+}
+.shere {
+    width: 40px;
+    background-color: hsl(210, 46%, 95%);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.shered {
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    padding: 20px ;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+    bottom: 90px;
+}
+.shered h6 {
+    color: #aeaeae;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-size: 16px;
+}
+.icon i {
+    margin: 10px;
+    font-size: 20px;
+}
+@media (min-width:567px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        max-width:1440px;
+        padding: 50px;
+    }
+    .part {
+        padding: 50px 30px;
+        border-radius: 10px;
+    }
+    .part .text p {
+        /* margin-bottom: 100px; */
+        line-height: 30px;
+        word-spacing: 10px;
+    }
+    .account div {
+        margin-left: -200px;
+    }
+    .shered {
+        display: flex;
+        display: none;
+        position: absolute;
+        width: 300px;
+        right: 111px;
+        bottom: 370px;
+        border-radius: 15px;
+    }
+    .shered::before {
+        content: '';
+        width: 0px;
+        height: 0px;
+        border: 20px solid transparent;
+        border-top: 20px solid hsl(217, 19%, 35%); 
+        left:50% ;
+        transform: translate(-50%);
+        bottom: -50%;
+        position: absolute;
+    }
+    .shered img  {
+        display: none;
+    }
+}
